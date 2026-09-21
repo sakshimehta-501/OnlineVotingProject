@@ -1,0 +1,30 @@
+CREATE DATABASE voting_system;
+USE voting_system;
+
+
+CREATE TABLE voter (
+    voter_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100),
+    has_voted BOOLEAN DEFAULT FALSE
+);
+
+
+CREATE TABLE candidate (
+    candidate_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    party VARCHAR(100),
+    symbol VARCHAR(100)
+);
+
+
+CREATE TABLE admin (
+    admin_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100)
+);
+
