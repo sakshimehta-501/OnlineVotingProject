@@ -51,6 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         <label>Phone Number</label>
         <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" required />
 
+        <label>Member ID</label>
+        <input type="text" placeholder="Enter Member ID" name="member_id" id="member_id" required />
+
         <label>Username</label>
         <input type="text" placeholder="Choose Username" name="username" id="username" required />
 
