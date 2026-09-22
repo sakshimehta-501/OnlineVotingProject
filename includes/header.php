@@ -40,6 +40,9 @@
 
         <a href="about.php">About</a>
 
+         <a href="how-it-works.php">How it Works</a>
+
+
         <a href="login.php">Login</a>
 
         <a href="register.php">Register</a>
