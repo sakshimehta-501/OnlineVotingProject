@@ -10,41 +10,12 @@
 
     <title>About Us - Online Voting System</title>
 
-    <link rel="stylesheet" href="/assets/css/login/about.css">
+    <link rel="stylesheet" href="/assets/css/main/about.css">
 
 </head>
 
 <body>
-
-
-    <!-- Navigation Bar -->
-
-    <nav class="navbar">
-
-        <div class="logo">
-            🗳️ ONLINE <span>VOTING</span> SYSTEM
-        </div>
-
-        <div class="menu">
-
-            <a href="index.php">Home</a>
-
-            <a href="about.php" class="active">
-                About Us
-            </a>
-
-            <a href="how.php">
-                How It Works
-            </a>
-
-            <a href="login.php" class="login">
-                👤 Login / Register
-            </a>
-
-        </div>
-
-    </nav>
-
+    <?php include 'includes/header.php'; ?>
 
     <!-- About Section -->
 
@@ -183,6 +154,8 @@
 
     </section>
 
+    <!-- FOOTER -->
+    <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>

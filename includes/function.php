@@ -6,16 +6,16 @@ function clean(string $value): string
     return htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
     
 }
-//Sshortcut for safely print html
-function e(?sting $value): string
+//Shortcut for safely print html
+function e(?string $value): string
 {
-    return htmlspecialchars ((sting)($value ?? ''), ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars((string)($value ?? ''), ENT_QUOTES, 'UTF-8');
 }
 
 //redirect helpers
 function redirect(string $path): void
 {
-    header('Location: $path');
+    header("Location: " . $path);
     exit;
 }
 

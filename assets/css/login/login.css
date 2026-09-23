@@ -6,6 +6,8 @@
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   color: #18351b;
   background:
     radial-gradient(
@@ -49,6 +51,7 @@ body:after {
 }
 
 .page {
+  flex: 1;
   min-height: 820px;
   position: relative;
   z-index: 2;

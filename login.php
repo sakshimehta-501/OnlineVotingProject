@@ -22,7 +22,7 @@
 </header> -->
 
 <?php include 'includes/header.php'; ?>
-<img class="leaves" src="leaf-decoration.png" alt="Decorative leaves">
+<img class="leaves" src="/assets/images/leaf-decoration.png" alt="Decorative leaves">
 
 <section class="page">
 
@@ -40,19 +40,19 @@
             <h2>Voter Login</h2>
             <div class="subtitle">Access your account to vote online.</div>
 
-            <form>
+            <form method="POST" action="login.php">
                 <div class="field">
                     <span>👤</span>
-                    <input type="text" placeholder="Enter Voter ID" required>
+                    <input type="text" name="username" placeholder="Enter Voter ID / Username" required>
                 </div>
 
                 <div class="field">
                     <span>🔒</span>
-                    <input type="password" placeholder="Enter Password" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
                 </div>
 
                 <div class="options">
-                    <label><input type="checkbox"> Remember me</label>
+                    <label><input type="checkbox" name="remember"> Remember me</label>
                     <a href="#">Forgot Password?</a>
                 </div>
 
@@ -73,10 +73,10 @@
 
 </section>
 
-<footer>
+<!-- <footer>
     <span>© 2026 Online Voting System. All rights reserved.</span>
     <span>● &nbsp; ● &nbsp; ● &nbsp; ●</span>
-</footer>
-
+</footer> -->
+<?php include 'includes/footer.php'; ?>
 </body>
 </html>

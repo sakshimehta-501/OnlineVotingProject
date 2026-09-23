@@ -1,0 +1,336 @@
+
+/* ================= HOME PAGE ONLY =================
+   Header and footer are imported separately.
+   Do not add navbar/footer styling here.
+==================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5ec;
+    color: #202e39;
+    overflow-x: hidden;
+}
+
+/* ================= HOME CONTENT ================= */
+
+.hero {
+    flex: 1;
+    width: 100%;
+    min-height: calc(100vh - 145px);
+    padding: 60px 8% 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+
+    position: relative;
+    overflow: hidden;
+
+    /* Soft, warm feel */
+    background:
+        radial-gradient(
+            circle at 8% 18%,
+            rgba(104, 126, 78, 0.10) 0 125px,
+            transparent 126px
+        ),
+        radial-gradient(
+            circle at 92% 78%,
+            rgba(104, 126, 78, 0.07) 0 150px,
+            transparent 151px
+        ),
+        linear-gradient(
+            135deg,
+            #f5f4eb 0%,
+            #fbfaf4 48%,
+            #f1efe3 100%
+        );
+}
+
+/* Soft leaf-like decoration — CSS only */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 105px;
+    left: -65px;
+    top: 25px;
+    background: rgba(91, 119, 69, 0.08);
+    border-radius: 100% 0 100% 0;
+    transform: rotate(-28deg);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 245px;
+    height: 110px;
+    right: -75px;
+    bottom: 15px;
+    background: rgba(91, 119, 69, 0.07);
+    border-radius: 0 100% 0 100%;
+    transform: rotate(-22deg);
+}
+
+.hero-text,
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= TEXT ================= */
+
+.hero-text {
+    flex: 1;
+    max-width: 590px;
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: clamp(48px, 4.5vw, 66px);
+    line-height: 1.05;
+    font-weight: 500;
+    color: #202e39;
+}
+
+.hero-text h1 span,
+.hero-text h1 i,
+.hero-text .highlight {
+    display: block;
+    color: #ed9f1e;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.yellow-line {
+    width: 112px;
+    height: 6px;
+    margin: 34px 0 27px;
+    border-radius: 10px;
+    background: #efa51e;
+}
+
+.hero-text p {
+    margin: 0 0 32px;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #536b79;
+}
+
+.vote-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-width: 185px;
+    padding: 16px 27px;
+
+    border-radius: 13px;
+    background: #f5a91f;
+    color: #111;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.vote-btn:hover {
+    background: #ffc02d;
+    transform: translateY(-2px);
+}
+
+/* ================= IMAGE ================= */
+
+.hero-image {
+    flex: 0 0 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(218, 218, 174, 0.45) 0%, rgba(218, 218, 174, 0.12) 65%, transparent 70%);
+    z-index: -1;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 26px;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* ================= LEAF SHADOWS NEAR IMAGE ================= */
+
+.leaf-shadow {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    background: rgba(35, 68, 40, 0.16);
+    filter: blur(3px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Top-right leaf shadow cluster */
+.leaf-top {
+    width: 150px;
+    height: 75px;
+    top: -30px;
+    right: -35px;
+    border-radius: 100% 0 100% 0;
+    transform: rotate(32deg);
+}
+
+.leaf-top-sub {
+    width: 105px;
+    height: 50px;
+    top: 30px;
+    right: -50px;
+    border-radius: 100% 0 100% 0;
+    transform: rotate(62deg);
+    opacity: 0.75;
+    background: rgba(35, 68, 40, 0.13);
+}
+
+/* Bottom-left leaf shadow cluster */
+.leaf-bottom {
+    width: 160px;
+    height: 80px;
+    bottom: -25px;
+    left: -40px;
+    border-radius: 0 100% 0 100%;
+    transform: rotate(-24deg);
+}
+
+.leaf-bottom-sub {
+    width: 110px;
+    height: 55px;
+    bottom: 45px;
+    left: -50px;
+    border-radius: 0 100% 0 100%;
+    transform: rotate(-56deg);
+    opacity: 0.75;
+    background: rgba(35, 68, 40, 0.13);
+}
+
+.hero-image:hover .leaf-top {
+    transform: rotate(35deg) translate(3px, -2px);
+}
+
+.hero-image:hover .leaf-bottom {
+    transform: rotate(-27deg) translate(-3px, 2px);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+    .hero {
+        min-height: 580px;
+        padding: 60px 6%;
+        gap: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .hero-image {
+        flex-basis: 350px;
+    }
+
+    .hero-image img {
+        width: 315px;
+        height: 315px;
+    }
+
+    .hero-image::before {
+        width: 330px;
+        height: 330px;
+    }
+
+    .leaf-top { width: 125px; height: 60px; top: -20px; right: -25px; }
+    .leaf-top-sub { width: 85px; height: 40px; top: 25px; right: -35px; }
+    .leaf-bottom { width: 130px; height: 65px; bottom: -18px; left: -28px; }
+    .leaf-bottom-sub { width: 90px; height: 45px; bottom: 35px; left: -38px; }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 760px) {
+    .hero {
+        min-height: 0;
+        padding: 60px 7% 75px;
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-text {
+        max-width: 650px;
+    }
+
+    .hero-text h1 {
+        font-size: 44px;
+    }
+
+    .yellow-line {
+        margin: 26px auto 24px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .hero-image img {
+        width: 290px;
+        height: 290px;
+    }
+
+    .hero-image::before {
+        width: 315px;
+        height: 315px;
+    }
+}
