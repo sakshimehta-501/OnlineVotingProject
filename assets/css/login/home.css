@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f6ed;
+    color: #1e2a34;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+   ========================= */
+
+.navbar {
+    height: 90px;
+    background: #182127;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6.5%;
+}
+
+
+/* Logo */
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: white;
+}
+
+.logo b {
+    color: #efa52d;
+}
+
+
+/* Navigation */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* Home active */
+
+.home-link {
+    position: relative;
+}
+
+.home-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -12px;
+
+    width: 50px;
+    height: 4px;
+
+    background: #f2a52b;
+
+    border-radius: 5px;
+}
+
+
+/* Login button */
+
+.login-btn {
+    background: #f5a92e;
+
+    color: #111 !important;
+
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero {
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 9%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Decorative background */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    background: #eeeDE2;
+
+    border-radius: 50%;
+
+    top: -170px;
+    left: -100px;
+}
+
+
+/* Bottom decoration */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 220px;
+
+    background: #eeece1;
+
+    border-radius: 50%;
+
+    bottom: -160px;
+    left: -100px;
+}
+
+
+/* =========================
+   LEFT SIDE
+   ========================= */
+
+.hero-text {
+    width: 48%;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-text h1 {
+    font-size: 61px;
+
+    line-height: 1.13;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+
+.hero-text h1 i {
+    color: #efa42c;
+
+    font-weight: bold;
+
+    font-style: italic;
+}
+
+
+/* Yellow line */
+
+.yellow-line {
+    width: 105px;
+    height: 5px;
+
+    background: #f1a62c;
+
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+
+/* Description */
+
+.hero-text p {
+    font-size: 20px;
+
+    color: #66737a;
+
+    margin-bottom: 32px;
+}
+
+
+/* Vote button */
+
+.vote-btn {
+    display: inline-block;
+
+    background: #f5a92e;
+
+    color: #111;
+
+    text-decoration: none;
+
+    padding: 18px 32px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.vote-btn:hover {
+    background: #df941e;
+}
+
+
+/* =========================
+   RIGHT SIDE IMAGE
+   ========================= */
+
+.hero-image {
+    width: 52%;
+
+    height: 600px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Background circle */
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 470px;
+    height: 470px;
+
+    background: #eeece1;
+
+    border-radius: 50%;
+
+    z-index: -1;
+}
+
+
+/* Voting picture */
+
+.hero-image img {
+    width: 650px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 0 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-image img {
+        width: 520px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .yellow-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+
+        height: 450px;
+    }
+
+    .hero-image img {
+        width: 500px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .login-btn {
+        padding: 10px 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+}
