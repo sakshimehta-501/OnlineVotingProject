@@ -21,17 +21,17 @@
 
         <div class="nav-menu">
 
-            <a href="index.html" class="home-link">
+            <a href="index.php" class="home-link">
                 Home
-                <a href="index.html" class="home-link">
+                <a href="index.php" class="home-link">
                     
             </a>
 
-            <a href="about.html">
+            <a href="about.php">
                 About Us
             </a>
 
-            <a href="how.html">
+            <a href="how.php">
                 How It Works
             </a>
 
@@ -72,7 +72,7 @@
         <!-- Right Image -->
         <div class="hero-image">
 
-            <img src="ballot-box.png"
+            <img src="/assets/images/ballot-box.png"
                  alt="Online Voting">
 
         </div>
