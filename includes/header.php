@@ -3,50 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Header</title>
     <style>
-      header {
-        background: #556b2f;
-        color: white;
-        padding: 18px 60px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+        header {
+  width: 100%;
+  padding: 18px 7%;
+  background: #102d13;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
 
-      .logo {
-        font-size: 28px;
-        font-weight: bold;
-      }
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
 
-      nav a {
-        text-decoration: none;
-        color: white;
-        margin-left: 25px;
-      }
+.logo span {
+  color: #efbd25;
+}
 
-      nav a:hover {
-        color: #ffd54f;
-      }
-      </style>
+nav {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
 
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-btn {
+  background: #efbd25;
+  color: #102d13;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+</style>
 </head>
 <body>
     <header>
-      <div class="logo">🗳 Online Voting System</div>
-
-      <nav>
+    <div class="logo">🗳 ONLINE <span>VOTING</span> SYSTEM</div>
+    <nav>
         <a href="index.php">Home</a>
-
-        <a href="about.php">About</a>
-
-         <a href="how-it-works.php">How it Works</a>
-
-
-        <a href="login.php">Login</a>
-
-        <a href="register.php">Register</a>
-      </nav>
-    </header>
+        <a href="about-us.php">About Us</a>
+        <a href="how-it-works.php">How It Works</a>
+        
+  
+        <a class="nav-btn" href="register.php">👤 Register</a>
+    </nav>
+</header>
 </body>
 </html>
