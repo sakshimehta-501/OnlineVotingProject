@@ -7,7 +7,7 @@
 
     <title>Online Voting System</title>
 
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/login/home.css">
 </head>
 
 <body>
