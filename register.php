@@ -61,13 +61,14 @@
             </div>
 
 
-            <form>
+            <form method="POST" action="register.php">
 
                 <div class="row">
 
                     <div class="field">
                         <span>👤</span>
                         <input type="text"
+                               name="first_name"
                                placeholder="First Name"
                                required>
                     </div>
@@ -75,6 +76,7 @@
                     <div class="field">
                         <span>👤</span>
                         <input type="text"
+                               name="last_name"
                                placeholder="Last Name"
                                required>
                     </div>
@@ -87,6 +89,7 @@
                     <div class="field">
                         <span>🪪</span>
                         <input type="text"
+                               name="voter_id"
                                placeholder="Voter ID"
                                required>
                     </div>
@@ -94,6 +97,7 @@
                     <div class="field">
                         <span>✉</span>
                         <input type="email"
+                               name="email"
                                placeholder="Email"
                                required>
                     </div>
@@ -106,6 +110,7 @@
                     <div class="field">
                         <span>🔒</span>
                         <input type="password"
+                               name="password"
                                placeholder="Password"
                                required>
                     </div>
@@ -113,6 +118,7 @@
                     <div class="field">
                         <span>🔒</span>
                         <input type="password"
+                               name="confirm_password"
                                placeholder="Confirm Password"
                                required>
                     </div>
@@ -122,7 +128,7 @@
 
                 <label class="terms">
 
-                    <input type="checkbox" required>
+                    <input type="checkbox" name="terms" required>
 
                     I agree to the Terms and Conditions
 
@@ -155,7 +161,7 @@
 </section>
 
 
-<footer>
+<!-- <footer>
 
     <span>
         © 2026 Online Voting System. All rights reserved.
@@ -165,7 +171,8 @@
         ● &nbsp; ● &nbsp; ● &nbsp; ●
     </span>
 
-</footer>
+</footer> -->
+<?php include 'includes/footer.php'; ?>
 
 </body>
 </html>

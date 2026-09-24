@@ -7,42 +7,11 @@
 
     <title>Online Voting System</title>
 
-    <link rel="stylesheet" href="/assets/css/login/home.css">
+    <link rel="stylesheet" href="/assets/css/main/home.css">
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-
-        <div class="logo">
-            🗳️ <span>ONLINE</span> <b>VOTING</b> SYSTEM
-        </div>
-
-        <div class="nav-menu">
-
-            <a href="index.php" class="home-link">
-                Home
-                <a href="index.php" class="home-link">
-                    
-            </a>
-
-            <a href="about.php">
-                About Us
-            </a>
-
-            <a href="how.php">
-                How It Works
-            </a>
-
-            <a href="login.php" class="login-btn">
-                👤 Login / Register
-            </a>
-
-        </div>
-
-    </nav>
-
+    <?php include 'includes/header.php'; ?>
 
     <!-- Main Home Section -->
     <section class="hero">
@@ -53,7 +22,7 @@
             <h1>
                 Your Vote<br>
                 Builds a Better<br>
-                <i>Tomorrow</i>
+                <span class="highlight">Tomorrow</span>
             </h1>
 
             <div class="yellow-line"></div>
@@ -69,8 +38,12 @@
         </div>
 
 
-        <!-- Right Image -->
+        <!-- Right Image with Leaf Shadows -->
         <div class="hero-image">
+            <span class="leaf-shadow leaf-top" aria-hidden="true"></span>
+            <span class="leaf-shadow leaf-top-sub" aria-hidden="true"></span>
+            <span class="leaf-shadow leaf-bottom" aria-hidden="true"></span>
+            <span class="leaf-shadow leaf-bottom-sub" aria-hidden="true"></span>
 
             <img src="/assets/images/ballot-box.png"
                  alt="Online Voting">
@@ -79,6 +52,8 @@
 
     </section>
 
+    <!-- FOOTER -->
+    <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>
