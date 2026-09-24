@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../includes/functions.php';
+require_once __DIR__ . '/../includes/function.php';
 require_once __DIR__ . '/../database/db.php';
 
 // Start session if not started yet
@@ -15,9 +15,9 @@ function is_logged_in(): bool
 }
 
 // Get current user ID
-function current_user_id()
+function current_user_id(): ?int
 {
-    return $_SESSION['user_id'] ?? null;
+    return isset($_SESSION['user_id']) ? (int) $_SESSION['user_id'] : null;
 }
 
 // Get current user role
@@ -34,19 +34,45 @@ function require_login(): void
     }
 }
 
+// Get current member ID
+function current_member_id(): ?string
+{
+    return $_SESSION['member_id'] ?? null;
+}
+
 // Log in user by saving information in session
-function login_user($userId, $role = 'voter', $username = '', $fullName = ''): void
+function login_user(
+    int $userId, 
+    string $role = 'voter', 
+    string $username = '', 
+    string $fullName = '', 
+    string $member_id = ''): void
 {
     $_SESSION['user_id']   = $userId;
     $_SESSION['role']      = $role;
     $_SESSION['username']  = $username;
     $_SESSION['full_name'] = $fullName;
+    $_SESSION['member_id'] = $member_id;
 }
 
 // Log out user by clearing session
 function logout_user(): void
 {
     $_SESSION = [];
+
+    if (ini_get('session.use_cookies')) {
+        $params = session_get_cookie_params();
+        setcookie(
+            session_name(),
+            '',
+            time() - 42000,
+            $params['path'],
+            $params['domain'],
+            $params['secure'],
+            $params['httponly']
+        );
+    }
+
     if (session_status() === PHP_SESSION_ACTIVE) {
         session_destroy();
     }
